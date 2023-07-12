@@ -1,5 +1,5 @@
 {
-  
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
     "beforeBuildCommand": "",
     "beforeDevCommand": "",
@@ -93,7 +93,11 @@
         "app"
       ],
       "shortDescription": "",
-      "targets": "all",
+      "targets":  [
+        "appimage",
+        "dmg",
+        "msi"
+      ],
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
