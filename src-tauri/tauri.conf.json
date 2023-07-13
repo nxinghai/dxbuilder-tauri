@@ -76,7 +76,7 @@
         "myicons/512x512.jpg",
         "myicons/512x512@2x.jpg",
         "myicons/icon.ico",
-        "icons/icon.icns"
+        "myicons/macos.icns"
       ],
       "identifier": "com.xh.dxbuilder",
       "longDescription": "",
