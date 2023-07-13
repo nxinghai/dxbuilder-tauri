@@ -59,11 +59,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LC_ALL: C
-          LD_LIBRARY_PATH: /home/runner/work/dxbuilder-tauri/src-tauri/jre/lib/amd64/server:/home/runner/work/dxbuilder-tauri/src-tauri/jre/lib/amd64
+          LD_LIBRARY_PATH: /home/runner/work/dxbuilder-tauri/dxbuilder-tauri/src-tauri/jre/lib/amd64/server:/home/runner/work/dxbuilder-tauri/dxbuilder-tauri/src-tauri/jre/lib/amd64
         with:
           tagName: v__VERSION__ # This only works if your workflow triggers on new tags.
           releaseName: v__VERSION__ # tauri-action replaces \_\_VERSION\_\_ with the app version.
 
       - name: run appimage.sh
         if: ${{ failure() }}
-        run: export LD_LIBRARY_PATH=/home/runner/work/dxbuilder-tauri/src-tauri/jre/lib/amd64/server:/home/runner/work/dxbuilder-tauri/src-tauri/jre/lib/amd64 && cd /home/runner/work/dxbuilder-tauri/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && ./build_appimage.sh
+        run: export LD_LIBRARY_PATH=/home/runner/work/dxbuilder-tauri/dxbuilder-tauri/src-tauri/jre/lib/amd64/server:/home/runner/work/dxbuilder-tauri/dxbuilder-tauri/src-tauri/jre/lib/amd64 && cd /home/runner/work/dxbuilder-tauri/dxbuilder-tauri/src-tauri/target/release/bundle/appimage && rm -rf *.AppDir && ./build_appimage.sh
